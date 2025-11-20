@@ -3,14 +3,14 @@ import pandas as pd
 from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
-# Load data once at startup
-data = pd.read_excel("backend\AndhraPradesh.xlsx")
+
+data = pd.read_csv("backend\my_dataframe.csv")
 current_index = 0
 
 @app.route("/get_data")
 def get_data():
     global current_index
-    # Get one row at a time
+    
     if current_index < len(data):
         row = data.iloc[current_index].to_dict()
         print(row)

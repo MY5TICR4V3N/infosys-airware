@@ -1,4 +1,4 @@
-import { CloudSun, LineChart, PieChart } from "lucide-react";
+import { CloudSun, LineChart, PieChart,Pen } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -13,6 +13,9 @@ export default function Navbar() {
         </a>
         <a href="/airComposition" className="btn btn-sm btn-ghost text-sky-600 hover:bg-sky-100 flex items-center gap-1 text-lg">
           <PieChart size={16}/> Air Composition
+        </a>
+        <a href="/feedback" className="btn btn-sm btn-ghost text-sky-600 hover:bg-sky-100 flex items-center gap-1 text-lg">
+          <Pen size={16}/> Feedback
         </a>
       </div>
     </div>

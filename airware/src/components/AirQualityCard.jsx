@@ -24,8 +24,8 @@ export default function AirQualityCard({ data }) {
         <Thermometer className="text-sky-500" /> Air Quality Overview
       </h2>
 
-      <div className={`text-center font-semibold py-2 rounded-lg ${getAQIColor(data["Ozone"])} mb-4`}>
-        AQI: {data["Ozone"]}
+      <div className={`text-center font-semibold py-2 rounded-lg ${getAQIColor(data["AQI"])} mb-4`}>
+        AQI: {data["AQI"]}
       </div>
 
       

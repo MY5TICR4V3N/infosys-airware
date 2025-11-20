@@ -42,8 +42,8 @@ export default function AirQualityData(){
       </h1>
       <AirQualityCard data={data} />
       
-      <AlertBox aqi={data["Ozone"]} />
-      <Suggestions aqi={data["Ozone"]} />
+      <AlertBox aqi={data["AQI"]} />
+      <Suggestions aqi={data["AQI"]} />
       
     </motion.div>
   );

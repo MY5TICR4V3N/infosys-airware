@@ -6,11 +6,13 @@ import Dashboard from "./Pages/Dashboard";
 import History from "./Pages/History";
 import { AirComposition } from "./Pages/AirComposition";
 import {createContext} from "react";
+import Feedback from "./Pages/Feedback";
+
 export const DataContext= createContext()
 
 export default function App() {
 
-    const [data, setData]=useState([])
+   const [data, setData]=useState([])
     
 
     useEffect(() => {
@@ -21,7 +23,7 @@ export default function App() {
     };
 
     fetchLoop();
-    const interval = setInterval(fetchLoop, 2000);
+    const interval = setInterval(fetchLoop, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -39,6 +41,7 @@ export default function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/history" element={<History />} />
             <Route path="/airComposition" element={<AirComposition/>}/>
+            <Route path="/feedback" element={<Feedback/>}/>
           </Routes>
         </main>
       </div>
