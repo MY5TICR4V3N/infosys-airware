@@ -33,8 +33,8 @@ export default function AirQualityData(){
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 ,y:30}}
+      animate={{ opacity: 1 , y:0}}
       className="flex flex-col items-center gap-6 mt-6"
     >
       <h1 className="text-4xl font-extrabold text-sky-700 mb-4">

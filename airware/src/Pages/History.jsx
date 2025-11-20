@@ -12,9 +12,9 @@ export default function History() {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className="max-w-4xl mx-auto mt-10 bg-white/60 p-6 rounded-2xl shadow-lg backdrop-blur-md border border-white/40"
+      initial={{ opacity: 0, y:30 }}
+      animate={{ opacity: 1, y:0 }}
+      className="mt-35 max-w-4xl mx-auto mt-10 bg-white/60 p-6 rounded-2xl shadow-lg backdrop-blur-md border border-white/40"
     >
       <h1 className="text-3xl font-bold text-sky-700 mb-4">📈 Air Quality Index History</h1>
       <ResponsiveContainer width="100%" height={400}>

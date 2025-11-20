@@ -2,8 +2,8 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, PieChart, Pie, Tooltip, C
 import { useState, useEffect, useContext } from "react";
 import { DataContext } from "../App";
 import { motion } from "framer-motion";
-import { saveReading, listenToReadings } from "../../../backend/FirebaseFunctions";
-import { db } from "../../../backend/Firebase";
+import { saveReading, listenToReadings } from "../../db/FirebaseFunctions";
+import { db } from "../../db/Firebase";
 
 export const AirComposition = () => {
   const data = useContext(DataContext);
@@ -43,7 +43,7 @@ export const AirComposition = () => {
     <div className="mt-35 flex flex-row items-center justify-center gap-10 ">      
 
       {/* Line Chart Card */}
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex-1 bg-white shadow-xl rounded-2xl p-6 border border-gray-200">        
+      <motion.div initial={{ opacity: 0 ,y:30}} animate={{ opacity: 1,y:0 }} className="flex-1 bg-white shadow-xl rounded-2xl p-6 border border-gray-200">        
         <h2 className="text-2xl font-semibold mb-4 text-center text-sky-600">Air Composition History (Last 20 readings)</h2>
 
         <div className="flex justify-center">
@@ -64,7 +64,7 @@ export const AirComposition = () => {
       </motion.div>
 
       {/* Pie Chart Card */}
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex-1 bg-white shadow-xl rounded-2xl p-6 border border-gray-200">        
+      <motion.div initial={{ opacity: 0 ,y:30}} animate={{ opacity: 1 , y:0}} className="flex-1 bg-white shadow-xl rounded-2xl p-6 border border-gray-200">        
         <h2 className="text-2xl font-semibold mb-4 text-center text-sky-600">Air Composition</h2>
 
         <div className="flex justify-center">
